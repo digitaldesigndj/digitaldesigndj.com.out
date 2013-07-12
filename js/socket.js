@@ -1,0 +1,1 @@
+$(function(){var e=io.connect("http://192.168.0.3:8880");e.on("news",function(e){console.log(e),$("#broadcast").text(e)})});

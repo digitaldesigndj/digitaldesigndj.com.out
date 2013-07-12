@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Taylor Young - @DigitalDesignDj
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    JavaScript, HTML5, CSS3
+    Normalize.css, jQuery, Modernizr, Git, Raspbian, NodeJS, NPM, Nginx, Express, Docpad, Underscore, Stylus, Coffee Script, Markdown, Eco, Handlebars, RequireJs, LastFM, Github, GitHubBadge, Gravatar, TypeKit, Sublime Text

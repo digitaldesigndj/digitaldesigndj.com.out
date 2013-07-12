@@ -1,0 +1,1 @@
+define(["json-widget","hbs!hb/github-com","hbs!hb/github-api"],function(e,t,n){var r="DigitalDesignDj",i="digitaldesigndj.com";e(".github-com","https://api.github.com/repos/"+r+"/"+i+"/commits",t),i="digitaldesigndj.api",e(".github-api","https://api.github.com/repos/"+r+"/"+i+"/commits",n)});

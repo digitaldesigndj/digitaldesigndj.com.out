@@ -1,0 +1,1 @@
+define(["underscore","jquery"],function(e,t){return function(r,i,s){var o=t(r);o.length&&t.ajax({url:i,dataType:"json",success:function(t){t?o.html(s(e.first(t,10))).addClass("widget"):console.log(t)}})}});

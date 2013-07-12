@@ -1,0 +1,1 @@
+define(["jquery","hbs!hb/lastfm-recent","hbs!hb/lastfm-current"],function(e,t,n){return function(t){console.log(t)}});

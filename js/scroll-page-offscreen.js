@@ -1,0 +1,1 @@
+define(["jquery"],function(e){e(".wrapper").css({"margin-bottom":window.innerHeight+"px"})});
