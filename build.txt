@@ -1,7 +1,7 @@
 
-css/style.css
+css/main.css
 ----------------
-css/style.css
+css/main.css
 
 vendor/h5bp.css
 ----------------
@@ -24,6 +24,8 @@ hbs!hb/lastfm-recent
 hbs!hb/lastfm-current
 js/lastfm-widget.js
 js/main.js
+js/bower/knockout/index.js
+js/koexample.js
 js/scroll-page-offscreen.js
 js/lib/underscore.js
 js/json-widget.js
@@ -31,4 +33,5 @@ hbs!hb/github-com
 hbs!hb/github-api
 js/github-widgets.js
 js/analytics.js
+js/live-reload.js
 js/app.js

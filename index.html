@@ -42,7 +42,7 @@ font-style:normal;font-weight:700;
 </style>
 
 	<!-- DocPad Styles + Our Own -->
-	<link  rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css" /><link  rel="stylesheet" href="/css/style.css" />
+	<link  rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css" /><link  rel="stylesheet" href="/css/main.css" />
 
 	<!-- Icons -->
 	<link rel="shortcut icon" href="/icons/house.png" />
@@ -67,9 +67,9 @@ html {
 	<ul>
 	
 		
-	
-		
 			<li><a href="/about.html" >About</a></li>
+		
+	
 		
 	
 	</ul>
@@ -86,7 +86,14 @@ html {
 			<p id="broadcast"></p>
 
 <p>Welcome to my site.</p>
+<div>You&#39;ve clicked <span data-bind='text: numberOfClicks'>&nbsp;</span> times</div>
 
+<button data-bind='click: registerClick, disable: hasClickedTooManyTimes'>Click me</button>
+
+<div data-bind='visible: hasClickedTooManyTimes'>
+    That&#39;s too many clicks! Please stop before you wear out your fingers.
+    <button data-bind='click: resetClicks'>Reset clicks</button>
+</div>
 
 <!-- <div class="lastfm current"></div>
 

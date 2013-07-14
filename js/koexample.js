@@ -1,0 +1,1 @@
+define(["knockout"],function(e){var t=function(){this.numberOfClicks=e.observable(0),this.registerClick=function(){this.numberOfClicks(this.numberOfClicks()+1)},this.resetClicks=function(){this.numberOfClicks(0)},this.hasClickedTooManyTimes=e.computed(function(){return this.numberOfClicks()>=3},this)};e.applyBindings(new t)});
