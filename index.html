@@ -13,7 +13,7 @@
 	<!-- Site Properities -->
 	<title>Home | DigitalDesignDj</title>
 	<meta name="description" content="Hello, come on in." />
-	<meta name="keywords" content="Digtial Media, Digital Design, Digital Art, Disk Jockey, DJ, Code, Node, JavaScript" />
+	<meta name="keywords" content="Digtial Media, Digital Design, Digital Art, Code, Node, JavaScript, Disk Jockey, DJ" />
 	<meta name="viewport" content="width=800" />
 	<meta name="google-site-verification" content="Xazptrm5ZlBhb4d5Wky8jSvNZq07I0QfjrBdeWb3Nm4" />
 
@@ -42,7 +42,7 @@ font-style:normal;font-weight:700;
 </style>
 
 	<!-- DocPad Styles + Our Own -->
-	<link  rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css" /><link  rel="stylesheet" href="/css/main.css" />
+	<link  rel="stylesheet" href="/bower/pure/index.css" /><link  rel="stylesheet" href="/css/main.css" />
 
 	<!-- Icons -->
 	<link rel="shortcut icon" href="/icons/house.png" />
@@ -71,6 +71,10 @@ html {
 		
 	
 		
+			<li><a href="/cycle.html" >Cycle</a></li>
+		
+	
+		
 	
 	</ul>
 </nav>
@@ -86,14 +90,50 @@ html {
 			<p id="broadcast"></p>
 
 <p>Welcome to my site.</p>
-<div>You&#39;ve clicked <span data-bind='text: numberOfClicks'>&nbsp;</span> times</div>
+<p><!-- <pre data-bind="text: ko.toJSON($data, null, 2)"></pre> --></p>
+<p><p class='grandTotal'>
+    Total value: <span data-bind='text: formatCurrency(grandTotal())'> </span>
+</p></p>
+<button data-bind='click: addLine'>Add product</button>
+<button data-bind='click: save'>Submit order</button>
 
-<button data-bind='click: registerClick, disable: hasClickedTooManyTimes'>Click me</button>
+<table width='100%'>
+    <thead>
+        <tr>
+            <th width='25%'>Category</th>
+            <th width='25%'>Product</th>
+            <th class='price' width='15%'>Price</th>
+            <th class='quantity' width='10%'>Quantity</th>
+            <th class='price' width='15%'>Subtotal</th>
+            <th width='10%'> </th>
+        </tr>
+    </thead>
+    <tbody data-bind='foreach: lines'>
+        <tr>
+            <td>
+                <select data-bind='options: sampleProductCategories, optionsText: "name", optionsCaption: "Select...", value: category'> </select>
+            </td>
+            <td data-bind="with: category">
+                <select data-bind='options: products, optionsText: "name", optionsCaption: "Select...", value: $parent.product'> </select>
+            </td>
+            <td class='price' data-bind='with: product'>
+                <span data-bind='text: formatCurrency(price)'> </span>
+            </td>
+            <td class='quantity'>
+                <input data-bind='visible: product, value: quantity, valueUpdate: "afterkeydown"' />
+            </td>
+            <td class='price'>
+                <span data-bind='visible: product, text: formatCurrency(subtotal())' > </span>
+            </td>
+            <td>
+                <a href='#' data-bind='click: $parent.removeLine'>Remove</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-<div data-bind='visible: hasClickedTooManyTimes'>
-    That&#39;s too many clicks! Please stop before you wear out your fingers.
-    <button data-bind='click: resetClicks'>Reset clicks</button>
-</div>
+<button data-bind='click: addLine'>Add product</button>
+<button data-bind='click: save'>Submit order</button>
 
 <!-- <div class="lastfm current"></div>
 
@@ -117,8 +157,13 @@ html {
 	</div>
 </div>
 
-	<!-- RequireJS -->
-	<script data-main="js/app" src="js/lib/require.js"></script>
+<!-- RequireJS -->
+<script data-main="js/koexample" src="bower/require/index.js"></script>
+// <script>
+// 	require(['./js/common'], function (common) {
+// 		require([ 'koexample' ]);
+// 	});
+// </script>
 
 </body>
 </html>

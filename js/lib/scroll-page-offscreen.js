@@ -1,0 +1,1 @@
+define(["require","jquery"],function(e){var t=e("jquery");t(".wrapper").css({"margin-bottom":window.innerHeight+"px"})});

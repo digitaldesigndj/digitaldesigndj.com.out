@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width" />
 
 	<!-- Site Properities -->
-	<title>About | DigitalDesignDj</title>
+	<title>Cycle | DigitalDesignDj</title>
 	<meta name="description" content="Hello, come on in." />
 	<meta name="keywords" content="Digtial Media, Digital Design, Digital Art, Code, Node, JavaScript, Disk Jockey, DJ" />
 	<meta name="viewport" content="width=800" />
@@ -67,11 +67,11 @@ html {
 	<ul>
 	
 		
-			<li><a href="/about.html" class=&quot;current&quot;>About</a></li>
+			<li><a href="/about.html" >About</a></li>
 		
 	
 		
-			<li><a href="/cycle.html" >Cycle</a></li>
+			<li><a href="/cycle.html" class=&quot;current&quot;>Cycle</a></li>
 		
 	
 		
@@ -85,102 +85,14 @@ html {
 	<div class="outer"><!-- Shadow and Second Border -->
 		<article id="content"><!-- Another Border and our content -->
 
-			<h1 class='title'>About</h1>
+			<h1 class='title'>Cycle</h1>
 
-			<p>This site is hosted on a Raspberry Pi (digitaldesigndj.com), and also on GoDaddy Linux Shared Hosting (taylordyoung.com). </p>
-<p><img src="/images/raspi.jpg" alt="RaspberryPi"></p>
-<p>That&#39;s it, the server, where it&#39;s actually sitting right now, on my dresser. If you made it this far, it&#39;s still plugged in :P</p>
-<h2>The Goals of this site</h2>
-<h3>Fast</h3>
-<p>Using Nginx as a webserver, pre-rendering files with docpad, and optimizing client side JavaScript with r.js makes this site fast. The max uplink speed of my consumer connection is only 2Mbps.</p>
-<h3>Low Power</h3>
-<p>The site needs to run on my RaspberryPi, so the tech used should be a light as possible.</p>
-<h3>Fun</h3>
-<p>Since the site is nice and quick, I have taken the luxury of adding 400ms of delay when you change pages (200ms each for in and out transitions). This gives me a chance to do some quick animation (fades) and really set the site experience apart.</p>
-<h3>JavaScript</h3>
-<p>The site is built frontend and back in JavaScript.</p>
-<h3>Building and Deploying</h3>
-<p>Building and Depoying websites is something I find enjoyable. I think it similar to the allure of a new &#39;Hello World&#39; program. The build process is awesome, because I get to use the terminal with its </p>
-<p><a href="http://nodejs.org/">NodeJS</a> and <a href="http://npmjs.org">NPM</a> are used to manage scripts on the backend</p>
-<p>I use <a href="http://en.wikipedia.org/wiki/Asynchronous_module_definition">AMD</a> via <a href="http://requirejs.org">RequireJS</a> on the client side to mangage dependencies and optimize the final output.</p>
-<h3>Awesome Developer Enviornment</h3>
-<p><strong>Docpad</strong> allows me to use live-reload and live-preprocessing at the same time. It works over a websocket, so I can have it running on a tablet, phone and computer ( multiple browsers too ) all at the same time
-<!-- If the site is a little slow, its because my consumer Internet connection will only let me squeeze out about 2 Mbps up. The server is also very simple, running an ARM chipset like you would find in a smartphone, but I beleive it's more than powerful enough to saturate the network connection before the hardware starts to hold things up. --></p>
-<h2>Double Build Optimization</h2>
-<p>This site, via NodeJS, is using JavaScript client side and server side. Docpad is used server side to create a flat static site, while RequireJs is used to flatten and minify client side.</p>
-<!-- The site is built using Docpad and RequireJs, each has a build optimization step that I am using. First Docpad renders the `src/` directory into `stg/`. This step does all the pre-processing; Sass->CSS CoffeeScript->JavaScript etc... and compiles the templates into flat .html site. 
-
-From `stg/` (the flat HTML site), r.js (the RequireJs optimizer) compiles `out/`. The `out/` or production version of the site is completely flat (all files served are static and present on the server) just like `stg/` but also combines all of the JavaScript used across the site into a single file.
- -->
-
-<h2>Technology</h2>
-<h4>Devlopment</h4>
-<ul>
-<li>MacBook 13-inch, Early 2008 (+SSD)</li>
-<li>OSX 10.7</li>
-<li>Sublime Text</li>
-<li>Terminal</li>
-<li>Chrome, Safari, FireFox</li>
-<li>iOS 5</li>
-<li>iPad</li>
-<li>iPhone</li>
-</ul>
-<h4>Version Control</h4>
-<ul>
-<li>Git</li>
-<li>Source Tree</li>
-<li>GitHub</li>
-<li>Bitbucket</li>
-</ul>
-<h4>Server</h4>
-<ul>
-<li>Raspberry Pi</li>
-<li>Raspbian (Debian Squeeze)</li>
-<li>NodeJS</li>
-<li>NPM</li>
-<li>Nginx</li>
-</ul>
-<h4>Frameworks</h4>
-<ul>
-<li>Express</li>
-<li>Docpad</li>
-<li>jQuery</li>
-<li>Underscore</li>
-</ul>
-<h4>Pre-Processers</h4>
-<ul>
-<li>Stylus</li>
-<li>Coffee Script</li>
-<li>Markdown</li>
-</ul>
-<h4>Templates</h4>
-<ul>
-<li>Eco</li>
-<li>Handlebars</li>
-</ul>
-<h4>Frontend</h4>
-<ul>
-<li>RequireJs (client-side async script loader)</li>
-<li>TypeKit (Museo Sans)</li>
-<li>Photoshop (backgrounds)</li>
-</ul>
-<h4>Languages</h4>
-<ul>
-<li>JavaScript</li>
-<li>HTML5</li>
-<li>CSS3</li>
-</ul>
-<h4>APIs</h4>
-<ul>
-<li>Last FM (Scrobbling from Spotify)</li>
-<li>Github</li>
-<li>GitHubBadge</li>
-<li>Gravatar</li>
-<li>TypeKit (Via WebFontLoader)</li>
-<li></li>
-</ul>
-<p>I prefer Open Source Software</p>
-
+			<div class="cycle-slideshow" style="width: 300px; height: 200px;">
+    <img width="300" height="200" style="background:red">
+    <img width="300" height="200" style="background:blue">
+    <img width="300" height="200" style="background:green">
+    <img width="300" height="200" style="background:black">
+</div>
 
 			
 
@@ -195,10 +107,10 @@ From `stg/` (the flat HTML site), r.js (the RequireJs optimizer) compiles `out/`
 </div>
 
 <!-- RequireJS -->
-<script data-main="js/common" src="bower/require/index.js"></script>
+<script data-main="js/slider" src="bower/require/index.js"></script>
 // <script>
 // 	require(['./js/common'], function (common) {
-// 		require([ 'common' ]);
+// 		require([ 'slider' ]);
 // 	});
 // </script>
 
